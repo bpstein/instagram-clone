@@ -8,6 +8,16 @@ feature 'Index displays a list of posts' do
     visit '/'
     expect(page).to have_content("This is post one")
     expect(page).to have_content("This is the second post")
-    expect(page).to have_css("img[src*='coffee']")
+    expect(page).to have_css("img[src*='burger']")
   end
 end
+
+feature 'Can view individual posts' do  
+  scenario 'Can click and view a single post' do
+    post = create(:post)
+
+    visit '/'
+    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    expect(page.current_path).to eq(post_path(post))
+  end
+end  
