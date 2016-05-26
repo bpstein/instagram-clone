@@ -7,7 +7,7 @@ feature 'Creating posts' do
     attach_file('Image', "spec/files/images/burger.jpg")
     fill_in 'Caption', with: 'nom nom nom' 
     click_button 'Create Post'
-    expect(page).to have_content('#burgertime')
+    expect(page).to have_content('nom nom nom')
     expect(page).to have_css("img[src*='burger.jpg']")
   end
 
