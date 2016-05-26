@@ -28,7 +28,6 @@ class PostsController < ApplicationController
   end
 
   def update 
-
     @post = Post.find(params[:id])
     if @post.save
       @post.update(post_params)
@@ -39,6 +38,13 @@ class PostsController < ApplicationController
       flash[:alert] = "Whoops!"
     end
   end
+
+  def destroy  
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+    flash[:success] = "Post deleted!"
+  end  
 
   private
 
