@@ -17,6 +17,7 @@ gem 'paperclip'
 gem "factory_girl_rails", "~> 4.0" 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'aws-sdk', '< 2.0'
+gem 'devise'
 
 group :development, :test do 
   gem 'sqlite3'
