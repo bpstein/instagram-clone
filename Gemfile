@@ -22,6 +22,9 @@ gem 'jquery-ui-rails'
 gem 'jquery-easing-rails'
 gem 'materialize-sass'
 gem 'devise'
+gem 'simple_form'
+gem 'paperclip', '~> 5.0.0'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
