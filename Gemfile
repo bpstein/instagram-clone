@@ -23,7 +23,7 @@ gem 'jquery-easing-rails'
 gem 'materialize-sass'
 gem 'devise'
 gem 'simple_form'
-gem 'paperclip', '~> 5.0.0'
+gem 'paperclip'
 
 
 group :development, :test do
