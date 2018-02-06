@@ -13,6 +13,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+<<<<<<< HEAD
 /tmp/*
 !/log/.keep
 !/tmp/.keep
@@ -21,3 +22,7 @@
 /yarn-error.log
 
 .byebug_history
+=======
+!/log/.keep
+/tmp
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98

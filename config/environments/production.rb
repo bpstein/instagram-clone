@@ -14,6 +14,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+<<<<<<< HEAD
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
   # `config/secrets.yml.key`.
@@ -22,6 +23,17 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+=======
+  # Enable Rack::Cache to put a simple HTTP cache in front of your application
+  # Add `rack-cache` to your Gemfile before enabling this.
+  # For large-scale production use, consider using a caching reverse proxy like
+  # NGINX, varnish or squid.
+  # config.action_dispatch.rack_cache = true
+
+  # Disable serving static files from the `/public` folder by default since
+  # Apache or NGINX already handles this.
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -30,20 +42,31 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+<<<<<<< HEAD
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
+=======
+  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
+  # yet still be able to expire them through the digest params.
+  config.assets.digest = true
+
+  # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
+<<<<<<< HEAD
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
+=======
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
@@ -52,15 +75,27 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
+<<<<<<< HEAD
   config.log_tags = [ :request_id ]
+=======
+  # config.log_tags = [ :subdomain, :uuid ]
+
+  # Use a different logger for distributed setups.
+  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+<<<<<<< HEAD
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "bs-instagram_#{Rails.env}"
   config.action_mailer.perform_caching = false
+=======
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  # config.action_controller.asset_host = 'http://assets.example.com'
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -76,6 +111,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+<<<<<<< HEAD
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -88,4 +124,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+=======
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+
+  # This sets paperclip to upload images to Amazon S3
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 end

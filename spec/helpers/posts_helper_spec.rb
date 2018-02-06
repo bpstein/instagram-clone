@@ -11,4 +11,8 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe PostsHelper, type: :helper do
+<<<<<<< HEAD
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> 2905e72d927fd41518bb7ba52e3d68bf1ffabf98
 end
