@@ -21,3 +21,12 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore .env file
+/.env
+
+# Ignore coverage files
+/coverage/*
