@@ -29,7 +29,7 @@ gem 'paperclip'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'sqlite3'
   gem 'capybara'
